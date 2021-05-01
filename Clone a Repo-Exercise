@@ -1,0 +1,78 @@
+1.Use the mkdir command to create a folder named Cats:
+
+mkdir Cats
+
+2.Use the cd command to change to the project folder:
+
+cd Cats
+
+3.Now, initialize the new repository and set the name of the default branch to main.
+
+git init --initial-branch=main
+git init -b main
+
+4.Configure Git by adding your credentials. Replace <USER_NAME> and <USER_EMAIL> with your own information (for example, "User Name" and "user-name@contoso.com").
+
+git config user.name "<USER_NAME>"
+git config user.email "<USER_EMAIL>"
+
+5.Create some files by using the touch command, and then stage and commit the files by using Git:
+
+touch index.html
+mkdir CSS
+touch CSS/site.css
+git add .
+git commit -m "Create empty index.html, site.css files"
+
+6.Add some HTML to your index.html file by using the Cloud Shell code editor, which you can open by using the code command at the terminal prompt:
+
+code index.html
+
+7.Paste in this HTML code:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Our Feline Friends</title>
+    <link rel="stylesheet" href="CSS/site.css">
+  </head>
+  <body>
+    <h1>Our Feline Friends</h1>
+    <p>Eventually we will put cat pictures here.</p>
+    <hr>
+  </body>
+</html>
+
+8.Save the file and close the editor. You can select the ellipsis "..." in the right corner of the editor, or use the accelerator key (Ctrl+S on Windows and Linux, Cmd+S on macOS).
+
+9.Change to the CSS directory and open site.css in the editor:
+
+cd CSS
+code site.css
+
+10.Add the following CSS to site.css:
+
+h1, h2, h3, h4, h5, h6 { font-family: sans-serif; }
+body { font-family: serif; }
+
+then save and close editor
+
+11.Go back to the Cats directory.
+
+cd ..
+
+12.Finally commit your changes:
+
+git add .
+git commit -m "Add simple HTML and stylesheet"
+
+13.Quickly check your Git log to make sure everything looks good:
+
+git log --oneline
+
+14.you should get an output like this:
+
+2bf69ab Add simple HTML and stylesheet
+bb371c8 Create empty index.html, site.css files
+
